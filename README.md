@@ -1,4 +1,4 @@
-# a99 Final Project Template Repo
+# a99 Final Project Repo
 
 **DUE:** 2023-05-05T22:00 (End of Exam Period)
 
