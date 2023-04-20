@@ -1,4 +1,6 @@
 # Final Project Checklist
+**DUE:** 2023-05-05T22:00 (End of Exam Period)
+**General final project issues and questions:** https://github.com/comp426-2022-spring/a99/issues
 
 ## Expectations
 
@@ -148,5 +150,3 @@ Information about choosing a license can be found here:
 
 [Public license selector](https://ufal.github.io/public-license-selector/) - Institute of Formal and Applied Linguistics (ÚFAL), Faculty of Mathematics and Physics, Charles University
 ```
-
-General final project issues and questions: https://github.com/comp426-2022-spring/a99/issues
