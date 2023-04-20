@@ -1,5 +1,6 @@
 # Final Project Checklist
-**DUE:** 2023-05-05T22:00 (End of Exam Period)
+**Due:** MAY 5 By End of Exam Period
+
 **General final project issues and questions:** https://github.com/comp426-2022-spring/a99/issues
 
 ## Expectations
