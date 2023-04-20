@@ -1,4 +1,25 @@
-# a99 Checklist
+# Final Project Checklist
+
+## Expectations
+
+The expectations for this project is something along the lines of a working prototype.
+It does not have to be beautiful, it just has to work for the most part (sort of).
+And it does not have to be feature rich, it just has to do some pretty basic things (though more advanced features are a place for you to flex your skills).
+
+I expect and encourage inter-team collaboration as well.
+If there is something that your team finds useful: create a discussion in our class organization about it!
+
+The repositories for this project will be created under the course organization as open source.
+This is intentional to encourage you to share things and learn from what your peers are doing.  
+
+Finally, be creative!
+
+This doesn't mean that what you build has to be earth-shattering.
+It can be whatever your team wants it to be.
+
+AND it can serve as a portfolio piece if you plan accordingly.
+
+So, BE CREATIVE, and do interesting things!
 
 ## First steps
 
@@ -85,3 +106,47 @@ Your team is responsible for incorporating the following specifications and deli
 5. Demo video
 	1. In order to get credit for this, add a row to the table in the README here and make a pull request: https://github.com/comp426-2022-fall/a99-demos/edit/main/README.md
 7. Self/group evaluation (Individual group members: this is part of the final exam for the course.)
+
+##### Some documentation examples
+
+(May be updated later)
+
+https://open-meteo.com/en/docs#api-documentation
+
+[Postman Generate API Documentation](https://learning.postman.com/docs/publishing-your-api/documenting-your-api/)
+
+#### Pull requests
+
+Your team must use the fork and pull requests feature in GitHub to manage contributions, changes, and discussions about your code and documentation.
+This makes everything a lot easier and you are less likely to overwrite someone elses work, run into merge conflicts, etc. 
+It is a built-in collaborative workflow.
+
+### License your work
+
+In addition to this `README.md`, you'll find a `LICENSE` file.
+This is provided as a placeholder so that you may replace it with the license of your choice.
+
+The placeholder file contains some information about choosing a license and how to include it in your repository.
+Read through the links in this file and try out the decision tools to prepare for having a discussion with your team about licensing.
+
+Make sure that the license specified in your Node `package.json` file matches that in your `LICENSE` file.
+
+```LICENSE
+You will want to change the text in this file to be the text of the license for your project.
+
+Information about choosing a license can be found here:
+
+[Licensing a repository](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/licensing-a-repository)
+
+[Choose an open source license](https://choosealicense.com/)
+
+[SPDX License List](https://spdx.org/licenses/)
+
+[Browse Software Licenses and Summaries](https://tldrlegal.com/licenses/browse)
+
+[How to choose a license for your own work](https://www.gnu.org/licenses/license-recommendations.en.html) - GNU Operating System
+
+[Public license selector](https://ufal.github.io/public-license-selector/) - Institute of Formal and Applied Linguistics (ÚFAL), Faculty of Mathematics and Physics, Charles University
+```
+
+General final project issues and questions: https://github.com/comp426-2022-spring/a99/issues
