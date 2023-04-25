@@ -1,4 +1,4 @@
-# Final Project Checklist
+# Final Project Organization
 **DUE: MAY 9 AT 7 PM**
 
 **General final project issues and questions:** https://github.com/comp426-2022-spring/a99/issues
