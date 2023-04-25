@@ -1,31 +1,10 @@
 # Final Project Checklist
-**Due:** MAY 5 By End of Exam Period
+**Due:** MAY 9 AT 7 PM
 
 **General final project issues and questions:** https://github.com/comp426-2022-spring/a99/issues
 
-## Expectations
-
-The expectations for this project is something along the lines of a working prototype.
-It does not have to be beautiful, it just has to work for the most part (sort of).
-And it does not have to be feature rich, it just has to do some pretty basic things (though more advanced features are a place for you to flex your skills).
-
-I expect and encourage inter-team collaboration as well.
-If there is something that your team finds useful: create a discussion in our class organization about it!
-
-The repositories for this project will be created under the course organization as open source.
-This is intentional to encourage you to share things and learn from what your peers are doing.  
-
-Finally, be creative!
-
-This doesn't mean that what you build has to be earth-shattering.
-It can be whatever your team wants it to be.
-
-AND it can serve as a portfolio piece if you plan accordingly.
-
-So, BE CREATIVE, and do interesting things!
-
-## Team mangement 
 ## Roles:
+Self/group evaluation- this is part of the final exam for the course
 
 Sokhna Fall
 - front end lead
@@ -46,17 +25,17 @@ Levi Harris
 
 ## First steps
 
-✅ Create a repository in your team using this template repo
-- [ ] Choose a license and update the LICENSE file accordingly (default is GPL-3.0-or-later). 
-✅ Edit this CHECKLIST.md file and use it as the main location of your technical documentation with links out to other information contained under `/docs/`.
-✅ Create a `/docs/` directory for more elaborate documentation of your API, planning notes, etc.Make sure that all of your team members have access to the repository.
-✅ Create a project under the **Projects** tab. Use this to manage your planning. Create a To-do list, etc. Explore the tools available and use them to manage your project.
-✅ Assign team roles and include a listing of those roles in this CHECKLIST.md file or in another file under `/docs/`.
-- [ ] Then put your entire development workflow in this repository.
-✅ Assign ONE approver to maintain the package and merge pull requests.
-- [ ] Create **forks** to add basic structure, files, and to develop features. Be mindful to not run over each other's code.
-✅ Use **Pull requests** to propose changes and incorporate them into your code from various team members. 
-✅ Use **Issues** to identify and track bugs and also to communicate about various aspects of the project.
+- ✅ Create a repository in your team using this template repo
+- Choose a license and update the LICENSE file accordingly (default is GPL-3.0-or-later). 
+- ✅ Edit this CHECKLIST.md file and use it as the main location of your technical documentation with links out to other information contained under `/docs/`.
+- ✅ Create a `/docs/` directory for more elaborate documentation of your API, planning notes, etc.Make sure that all of your team members have access to the repository.
+- ✅ Create a project under the **Projects** tab. Use this to manage your planning. Create a To-do list, etc. Explore the tools available and use them to manage your project.
+- ✅ Assign team roles and include a listing of those roles in this CHECKLIST.md file or in another file under `/docs/`.
+- Then put your entire development workflow in this repository.
+- Assign ONE approver to maintain the package and merge pull requests.
+- Create **forks** to add basic structure, files, and to develop features. Be mindful to not run over each other's code.
+- Use **Pull requests** to propose changes and incorporate them into your code from various team members. 
+- Use **Issues** to identify and track bugs and also to communicate about various aspects of the project.
 
 ## Next steps
 1. Brainstorm (no ideas are bad) and DOCUMENT the brainstorming.
@@ -132,3 +111,24 @@ Information about choosing a license can be found here:
 
 [Public license selector](https://ufal.github.io/public-license-selector/) - Institute of Formal and Applied Linguistics (ÚFAL), Faculty of Mathematics and Physics, Charles University
 ```
+
+## Expectations
+
+The expectations for this project is something along the lines of a working prototype.
+It does not have to be beautiful, it just has to work for the most part (sort of).
+And it does not have to be feature rich, it just has to do some pretty basic things (though more advanced features are a place for you to flex your skills).
+
+I expect and encourage inter-team collaboration as well.
+If there is something that your team finds useful: create a discussion in our class organization about it!
+
+The repositories for this project will be created under the course organization as open source.
+This is intentional to encourage you to share things and learn from what your peers are doing.  
+
+Finally, be creative!
+
+This doesn't mean that what you build has to be earth-shattering.
+It can be whatever your team wants it to be.
+
+AND it can serve as a portfolio piece if you plan accordingly.
+
+So, BE CREATIVE, and do interesting things!
