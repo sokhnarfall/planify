@@ -9,4 +9,4 @@ Think of it as an opportunity to hone your ability to pitch an idea that you hav
 - In order to get credit for this, add a row to the table in the README here and make a pull request: https://github.com/comp426-20223-spring/a99-demos/edit/main/README.md
 
 ## Set Up Instructions
-You can find more information about our website under `docs/get-started.md` but below are basic instructions to get the website up and running.
+You can find more information about our website under `planify/docs/get-started.md` but below are basic instructions to get the website up and running.
