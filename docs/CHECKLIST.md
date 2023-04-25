@@ -24,44 +24,39 @@ AND it can serve as a portfolio piece if you plan accordingly.
 
 So, BE CREATIVE, and do interesting things!
 
+## Team mangement 
+## Roles:
+
+Sokhna Fall
+- front end lead
+- plan manager - keeps an eye on the overall plan and keep the project tab/to-do list up to date
+- A project manager - keeps track of all the moving parts and make sure that everything that needs to happen is happening
+
+Kirsten 
+- design lead
+- documentation manager - keeps the documentation in order and identify what is missing and needs to be documented
+
+Richard Okoro
+- back end lead
+- release manager - manages the packaging and release process for your prototype package
+
+Levi Harris
+- database lead
+- review manager - reviews pull requests and merge or reject them and manage the related discussions
+
 ## First steps
 
-1. Create a repository in your team using this template repo
-2. Choose a license and update the LICENSE file accordingly (default is GPL-3.0-or-later). 
-3. Edit this CHECKLIST.md file and use it as the main location of your technical documentation with links out to other information contained under `/docs/`.
-4. Create a `/docs/` directory for more elaborate documentation of your API, planning notes, etc.
-5. Make sure that all of your team members have access to the repository.
-6. Create a project under the **Projects** tab. Use this to manage your planning. Create a To-do list, etc. Explore the tools available and user them to manage your project.
-7. Assign team roles and include a listing of those roles in this CHECKLIST.md file or in another file under `/docs/`.
-8. Then put your entire development workflow in this repository.
-9. Assign ONE approver to maintain the package and merge pull requests.
-10. Create **forks** to add basic structure, files, and to develop features. Be mindful to not run over each other's code.
-11. Use **Pull requests** to propose changes and incorporate them into your code from various team members. 
-12. Use **Issues** to identify and track bugs and also to communicate about various aspects of the project.
-
-## Team mangement 
-
-Plan to meet with your team ASAP.
-Talk through identifying roles within your team.
-
-Try to figure out what each of you are good at/enjoy doing and try to work out roles that incorporate that.
-
-Some basic roles you will want to consider:
-
-1. A review manager - someone to review pull requests and merge or reject them and manage the related discussions
-2. A plan manager - someone to keep an eye on the overall plan and keep the project tab/to-do list up to date
-3. A documentation manager - someone to keep the documentation in order and identify what is missing and needs to be documented
-4. A release manager - someone to manage the packaging and release process for your prototype package
-5. A project manager - someone keeping track of all the moving parts and make sure that everything that needs to happen is happening
-5. Roles for team members to take charge or different parts of the project. Possible roles:
-    1. Front end lead
-    2. Back end lead
-    3. Database lead
-    4. Design lead
-    5. Etc.
-
-You will notice that there are more roles than people in your group.
-That is because you will all be doing a hybrid job of managing a thing while working on other things.
+✅ Create a repository in your team using this template repo
+- [ ] Choose a license and update the LICENSE file accordingly (default is GPL-3.0-or-later). 
+✅ Edit this CHECKLIST.md file and use it as the main location of your technical documentation with links out to other information contained under `/docs/`.
+✅ Create a `/docs/` directory for more elaborate documentation of your API, planning notes, etc.Make sure that all of your team members have access to the repository.
+✅ Create a project under the **Projects** tab. Use this to manage your planning. Create a To-do list, etc. Explore the tools available and use them to manage your project.
+✅ Assign team roles and include a listing of those roles in this CHECKLIST.md file or in another file under `/docs/`.
+- [ ] Then put your entire development workflow in this repository.
+✅ Assign ONE approver to maintain the package and merge pull requests.
+- [ ] Create **forks** to add basic structure, files, and to develop features. Be mindful to not run over each other's code.
+✅ Use **Pull requests** to propose changes and incorporate them into your code from various team members. 
+✅ Use **Issues** to identify and track bugs and also to communicate about various aspects of the project.
 
 ## Next steps
 1. Brainstorm (no ideas are bad) and DOCUMENT the brainstorming.
@@ -78,7 +73,6 @@ That is because you will all be doing a hybrid job of managing a thing while wor
 12. Create a pull request to post a link to your project and your demo the demo repo: https://github.com/comp426-2023-spring/a99-project-demo/
 
 ## Deliverables
-
 A GitHub repository in the class organization containing your code and documentation and a prototype release package.
 Your project should take the form of a Node package, with all of the attendant items associated with that.
 The following three script commands should work in your package:
@@ -104,25 +98,12 @@ Your team is responsible for incorporating the following specifications and deli
 	1. License documenation - Choose a license and include it in the repository just like we have been.
 	1. README.md file with basic descriptiong, installation requirements/instructions, dependency list, run instructions.
 	3. `/docs/` directory containing full documentation of every available API endpoint that you create for your app. This directory shoud also house an archive of your planning documentation. 
-	2. Code comments (preferably referring to the documentation)
-	3. User instructions in the interface if needed.
-5. Demo video
-	1. In order to get credit for this, add a row to the table in the README here and make a pull request: https://github.com/comp426-2022-fall/a99-demos/edit/main/README.md
-7. Self/group evaluation (Individual group members: this is part of the final exam for the course.)
-
-##### Some documentation examples
-
-(May be updated later)
-
-https://open-meteo.com/en/docs#api-documentation
-
-[Postman Generate API Documentation](https://learning.postman.com/docs/publishing-your-api/documenting-your-api/)
-
-#### Pull requests
-
-Your team must use the fork and pull requests feature in GitHub to manage contributions, changes, and discussions about your code and documentation.
-This makes everything a lot easier and you are less likely to overwrite someone elses work, run into merge conflicts, etc. 
-It is a built-in collaborative workflow.
+	4. examples https://open-meteo.com/en/docs#api-documentation [Postman Generate API Documentation](https://learning.postman.com/docs/publishing-your-api/documenting-your-api/)
+	5. Code comments (preferably referring to the documentation)
+	6. User instructions in the interface if needed.
+5. Pull requests
+	1. Your team must use the fork and pull requests feature in GitHub to manage contributions, changes, and discussions about your code and documentation. 
+	2. This makes everything a lot easier and you are less likely to overwrite someone elses work, run into merge conflicts, etc. It is a built-in collaborative workflow.
 
 ### License your work
 
