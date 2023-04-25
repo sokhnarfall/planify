@@ -25,12 +25,6 @@ Levi Harris
 
 ## Deliverables
 A GitHub repository in the class organization containing your code and documentation and a prototype release package.
-Your project should take the form of a Node package, with all of the attendant items associated with that.
-The following three script commands should work in your package:
-
-1. `npm install` - Install dependencies for your package.
-2. `npm test` - Start app, check that everything can run, and then stop app.
-3. `npm run` - Command to bring up all parts of the app/system's server scripts.
 
 Your team is responsible for incorporating the following specifications and deliverables into your final project:
 
