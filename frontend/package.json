@@ -4,8 +4,7 @@
   "description": "A local web app.",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "test": "node server.js --port=3000"
   },
   "author": "leharris3",
   "license": "MIT",
