@@ -9,7 +9,7 @@ Think of it as an opportunity to hone your ability to pitch an idea that you hav
 - In order to get credit for this, add a row to the table in the README here and make a pull request: https://github.com/comp426-20223-spring/a99-demos/edit/main/README.md
 
 ## Set Up Instructions
-- You can find more information about our website under `planify/docs/get-started.md` but below are basic instructions to get the website up and running.
+You can find more information about our website under `planify/docs/get-started.md` but below are basic instructions to get the website up and running assuming you already have the prerequisites outlined in the `get-started.md` file.
 - Your project should take the form of a Node package, with all of the attendant items associated with that.
 The following three script commands should work in your package:
 
