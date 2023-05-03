@@ -81,65 +81,135 @@ app.post("/signup", (req, res) => {
 app.get("/homepage", (req, res) => {
   // Render the homepage with a welcome message for the authenticated user
   res.send(`
-    <h1>Welcome to MyList!</h1>
-    <h2>Hello, ${req.query.username}!</h2>
+  <h1>Welcome to Planify, ${req.query.username}!</h1>
     <h2>Add a Task</h2>
-<form id="add-task-form">
-  <label for="task-title">Task Title:</label>
-  <input type="text" id="task-title" name="task-title">
-  <label for="task-description">Task Description:</label>
-  <input type="text" id="task-description" name="task-description">
-  <label for="task-date">Task Date:</label>
-  <input type="date" id="task-date" name="task-date">
-  <button type="submit">Add Task</button>
-</form>
-<ul id="task-list"></ul>
-<script>
-  function addTask() {
-    // Get the input field and the task list
-    var input = document.getElementById("taskInput");
-    var list = document.getElementById("taskList");
-
-    // Create a new list item and add it to the list
-    var item = document.createElement("li");
-    item.innerHTML = input.value;
-    list.appendChild(item);
-
-    // Clear the input field
-    input.value = "";
-  }
 
 
-  const addTaskForm = document.querySelector('#add-task-form');
-  const taskTitleInput = document.querySelector('#task-title');
-  const taskDescriptionInput = document.querySelector('#task-description');
-  const taskDateInput = document.querySelector('#task-date');
-  const taskList = document.querySelector('#task-list');
-  
+// <form id="add-task-form">
+//   <label for="task-title">Task Title:</label>
+//   <input type="text" id="task-title" name="task-title">
+//   <label for="task-description">Task Description:</label>
+//   <input type="text" id="task-description" name="task-description">
+//   <label for="task-date">Task Date:</label>
+//   <input type="date" id="task-date" name="task-date">
+//   <span onclick="newElement()" class="addBtn">Add</span>
+// </form>
+
+// <ul id="task-list"></ul>
+
+// <script>
+
+//   const addTaskForm = document.querySelector('#add-task-form');
+//   const taskTitleInput = document.querySelector('#task-title');
+//   const taskDescriptionInput = document.querySelector('#task-description');
+//   const taskDateInput = document.querySelector('#task-date');
+//   const taskList = document.querySelector('#task-list');
   
 
-  addTaskForm.addEventListener('submit', function(event) {
-    event.preventDefault();
+//   addTaskForm.addEventListener('submit', function(event) {
+//     event.preventDefault();
   
-    const task = {
-      title: taskTitleInput.value,
-      description: taskDescriptionInput.value,
-      date: taskDateInput.value
-    };
+//     const task = {
+//       title: taskTitleInput.value,
+//       description: taskDescriptionInput.value,
+//       date: taskDateInput.value
+//     };
 
-      // Clear the form inputs
-    taskTitleInput.value = '';
-      taskDescriptionInput.value = '';
-      taskDateInput.value = '';
-  })
-   //.catch(error => console.log(error));
- // });
-   // }
+       // Clear the form inputs
+//       taskTitleInput.value = '';
+//       taskDescriptionInput.value = '';
+//       taskDateInput.value = '';
+//   });
+// </script>
+
+
+// new stuff
+
+<html>  
+<head>
+<style>
+.submitBtn {
+  padding: 10px;
+  background: #90ee90;
+  width: 100%;
+  color: #555;
+  float: left;
+  text-align: center;
+  font-size: 18px;
+  transition: 0.3s;
+  border-radius: 0;
+}
+  .taskfield {
+    padding: 5px;
+    width: 150%;
+    color: #555;
+    float: left;
+    text-align: left;
+    font-size: 16px;
+    //cursor: pointer;
+    border-radius: 0;
+    }
+  .descriptionfield {
+    padding: 5px;
+    width: 150%;
+    color: #555;
+    float: left;
+    text-align: left;
+    font-size: 16px;
+    border-radius: 0;
+    }
+  .datefield {
+    padding: 5px;
+    width: 150%;
+    color: #555;
+    float: left;
+    text-align: left;
+    font-size: 16px;
+    border-radius: 0;
+    }
+</style>  
+
+<title> ToDo Page </title>  
+</head>  
+
+<body align="center">  
+<h2> Create a New Task </h2>  
+<table cellspacing="2" align="center" cellpadding="8" border="0">  
+
+<tr><td> Task </td>   
+<td><input type="text" placeholder="Enter a title for this task" class="taskfield" id="taskTitle"></td></tr>  
+
+<tr><td> Description </td>  
+<td><input type="text" placeholder="Elaborate more on this task..." class="descriptionfield" id="description"></td></tr>
+
+<tr><td> Date </td>  
+<td><input type="date" name="task-date" class="datefield" id="dateInput"></td></tr>
+
+<td><input type="submit" value="Add Task" name="Add Task" onclick="newTask()" class="submitBtn"</td>
+
+</table>
 </script>
-<ul id="planner-list">
-  <!-- Existing tasks will be added here -->
-</ul>
-  `);
+
+<h1>My To Do List</h1>
+<ul id="taskList"></ul>
+
+<script>
+function newTask() {
+let data = ["listitem1", "listitem2"];
+let list = document.getElementById("taskList");
+ 
+data.forEach((item) => {
+  let li = document.createElement("li");
+  li.innerText = item;
+  list.appendChild(li);
+});
+}
+
+</script>
+</body>
+</html>
+
+`);
 });
 
 // Start server
