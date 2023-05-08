@@ -1,0 +1,100 @@
+<html>  
+  <head>
+    <style>
+     body {
+      background-color: #56A0D3
+      color: #FFFFFF;
+      }
+      .submitBtn {
+        padding: 10px;
+        background: #90ee90;
+        width: 100%;
+        color: #555;
+        float: left;
+        text-align: center;
+        font-size: 18px;
+        transition: 0.3s;
+        border-radius: 0;
+      }
+      .taskfield {
+        padding: 5px;
+        width: 150%;
+        color: #555;
+        float: left;
+        text-align: left;
+        font-size: 16px;
+        --cursor: pointer;
+        border-radius: 0;
+      }
+      .descriptionfield {
+        padding: 5px;
+        width: 150%;
+        color: #555;
+        float: left;
+        text-align: left;
+        font-size: 16px;
+        border-radius: 0;
+      }
+      .datefield {
+        padding: 5px;
+        width: 150%;
+        color: #555;
+        float: left;
+        text-align: left;
+        font-size: 16px;
+        border-radius: 0;
+      }
+     
+    </style>  
+    <title> ToDo Page </title>  
+  </head>  
+  <body align-item="center">  
+    <h2> Add a Task </h2>  
+    <form id="add-task-form">
+      <div class="input-group">
+        <label for="task-title">Task Title:</label>
+        <input type="text" id="task-title" name="task-title" class="taskfield">
+      </div>
+      <div class="input-group">
+        <label for="task-description">Task Description:</label>
+        <input type="text" id="task-description" name="task-description" class="descriptionfield">
+      </div>
+      <div class="input-group">
+        <label for="task-date">Task Date:</label>
+        <input type="date" id="task-date" name="task-date" class="datefield">
+      </div>
+      <button type="submit" class="submitBtn">Add Task</button>
+    </form>
+    
+    
+    </script> 
+<h2> My To Do List</h2>
+<ul id="task-list"></ul>
+    <script>
+      const addTaskForm = document.querySelector('#add-task-form');
+      const taskTitleInput = document.querySelector('#task-title');
+      const taskDescriptionInput = document.querySelector('#task-description');
+      const taskDateInput = document.querySelector('#task-date');
+      const taskList = document.querySelector('#task-list');
+  
+      addTaskForm.addEventListener('submit', function(event) {
+        event.preventDefault();
+    
+        const task = {
+          title: taskTitleInput.value,
+          description: taskDescriptionInput.value,
+          date: taskDateInput.value
+        };
+    
+        const taskItem = document.createElement('li');
+        taskItem.innerHTML = `<h3>${task.title}</h3><p>${task.description}</p><p>${task.date}</p>`;
+        taskList.appendChild(taskItem);
+    
+        // Clear the form inputs
+        taskTitleInput.value = '';
+        taskDescriptionInput.value = '';
+        taskDateInput.value = '';
+      });
+    </script>
+  </body>
+</html>
