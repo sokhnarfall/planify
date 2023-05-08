@@ -1,8 +1,26 @@
+var admin = require("firebase-admin");
+
+var serviceAccount = require("/Users/richardokoro/Documents/GitHub/planify/planify-201b7-firebase-adminsdk-w3xxg-780f299d8d.json");
+
+admin.initializeApp({
+  credential: admin.credential.cert(serviceAccount),
+  databaseURL: "https://planify-201b7-default-rtdb.firebaseio.com"
+});
+
 const express = require("express");
 const bodyParser = require("body-parser");
 const app = express();
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
+const accountsRef = admin.database().ref('accounts');
+
+//
+const session = require('express-session');
+const firebaseAuth = require('firebase-auth');
+
+// Initialize the Firebase Authentication client
+const auth = firebaseAuth(admin);
+
 
 // Initialize an empty list of users
 const users = [];
@@ -17,6 +35,13 @@ app.get("/", (req, res) => {
     <button onclick="window.location.href='/signup'">Signup</button>
   `);
 });
+
+// Use the express-session middleware to enable session storage
+app.use(session({
+  secret: 'your-secret-key',
+  resave: false,
+  saveUninitialized: true
+}));
 
 // Login page
 app.get("/login", (req, res) => {
@@ -34,17 +59,21 @@ app.get("/login", (req, res) => {
 // Handle login form submission
 app.post("/login", (req, res) => {
   const { username, password } = req.body;
-  // Check if the user exists
-  const user = users.find(
-    (user) => user.username === username && user.password === password
-  );
-  if (user) {
-    // Redirect to the homepage
+  // Authenticate the user with Firebase Authentication
+  auth.signInWithEmailAndPassword(username, password).then((userCredential) => {
+    // Store the user ID in the session for future requests
+    req.session.userId = userCredential.user.uid;
+
+    // Send a success response to the client
     res.redirect("/homepage");
-  } else {
-    // If the user does not exist, show an error message
-    res.send("<h1>Invalid username or password</h1>");
-  }
+    res.status(200).send('Login successful');
+    
+  }).catch((error) => {
+      // Send an error response to the client
+      console.error('Error logging in:', error);
+      res.status(401).send('Invalid email or password');
+    });
+
 });
 
 // Signup page
@@ -72,6 +101,28 @@ app.post("/signup", (req, res) => {
     );
   } else {
     // If the user does not exist, create a new user and redirect to the login page
+
+    // Generate a new unique ID for the new account
+    const newAccountId = accountsRef.push().key;
+
+    // Create a new object representing the account data
+    const newAccountData = {
+      username,
+      password
+    };
+
+    // Add the new account data to the database using the new ID
+    accountsRef.child(newAccountId).set(newAccountData)
+    .then(() => {
+      // Send a success response to the client
+      res.status(200).send('Account created successfully');
+    })
+    .catch((error) => {
+      // Send an error response to the client
+      console.error('Error creating new account:', error);
+      res.status(500).send('Error creating new account');
+    });
+
     users.push({ username, password });
     res.redirect("/login");
   }
