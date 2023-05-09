@@ -21,3 +21,10 @@ Npm commands:
 1. `npm install` - Install dependencies for your package.
 2. `npm test` - Start app, check that everything can run, and then stop app.
 3. `npm run` - Command to bring up all parts of the app/system's server scripts.
+
+Dependency List:
+1. express
+2. express-session
+3. firebase
+4. firebase-auth
+5. body-parser
