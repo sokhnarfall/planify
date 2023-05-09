@@ -1,20 +1,25 @@
-<html>  
+
   <head>
     <style>
-     body {
-      background-color: #56A0D3
-      color: #FFFFFF;
-      }
+    body{
+    background-color: #DBF9FC; 
+ background-image: url("https://images.pexels.com/photos/606539/pexels-photo-606539.jpeg?auto=compress&cs=tinysrgb&w=800");
+ 			background-size: cover;
+			
+    
+    }
       .submitBtn {
         padding: 10px;
-        background: #90ee90;
+        background: #EDBB99;
         width: 100%;
-        color: #555;
+        color: white;
+        font-weight: bold;
         float: left;
         text-align: center;
         font-size: 18px;
         transition: 0.3s;
         border-radius: 0;
+          font-family: Marker Felt, fantasy;
       }
       .taskfield {
         padding: 5px;
@@ -25,6 +30,8 @@
         font-size: 16px;
         --cursor: pointer;
         border-radius: 0;
+        font-weight: bold
+        
       }
       .descriptionfield {
         padding: 5px;
@@ -43,33 +50,64 @@
         text-align: left;
         font-size: 16px;
         border-radius: 0;
+      
       }
-     
+      h2{
+      color:white;
+      font-size: 40px;
+      font-weight: bold;
+      font-family: Marker Felt, fantasy;
+      }
+   	title{
+    color: white;
+    }
+  
+    ul.no-bullets{
+    list-style-type:none;
+    }
+    ul {
+    margin:0;
+    padding:0;
+    }
+    ul li 
+    {
+    cursor: pointer;
+ -- position: relative;
+  --padding: 6px 8px 6px 8px;
+  list-style-type: none;
+  --background: #eee;
+  background-size: .5px;
+  font-size: 18px;
+  --transition: 0.2s;
+}
+ul #add-task-form{
+margin-top:20px;
+}
+
     </style>  
-    <title> ToDo Page </title>  
+    <title> ToDo Page </title>
+    
   </head>  
   <body align-item="center">  
-    <h2> Add a Task </h2>  
+    <h2> Enter A Task </h2>  
     <form id="add-task-form">
       <div class="input-group">
-        <label for="task-title">Task Title:</label>
+        <label for="task-title"style = "color:white; font-size:25px; font-weight:bold;   font-family: Marker Felt, fantasy;">Task Title:</label>
         <input type="text" id="task-title" name="task-title" class="taskfield">
       </div>
       <div class="input-group">
-        <label for="task-description">Task Description:</label>
+        <label for="task-description" style = "color:white;font-size:25px; font-weight:bold;   font-family: Marker Felt, fantasy;;">Task Description:</label>
         <input type="text" id="task-description" name="task-description" class="descriptionfield">
       </div>
       <div class="input-group">
-        <label for="task-date">Task Date:</label>
+        <label for="task-date"style = "color:white; font-size:25px; font-weight:bold;   font-family: Marker Felt, fantasy;">Task Date:</label>
         <input type="date" id="task-date" name="task-date" class="datefield">
       </div>
       <button type="submit" class="submitBtn">Add Task</button>
     </form>
     
+    <ul id="task-list" class="no-bullets"></ul>
     
-    </script> 
-<h2> My To Do List</h2>
-<ul id="task-list"></ul>
     <script>
       const addTaskForm = document.querySelector('#add-task-form');
       const taskTitleInput = document.querySelector('#task-title');
@@ -86,15 +124,44 @@
           date: taskDateInput.value
         };
     
-        const taskItem = document.createElement('li');
-        taskItem.innerHTML = `<h3>${task.title}</h3><p>${task.description}</p><p>${task.date}</p>`;
+        const taskItem = document.createElement('LI');
+        taskItem.innerHTML = `<h3 style = "color:white; font-size:15px; font-weight:bold;   font-family: Marker Felt, fantasy;">${task.title}</h3><p style = "color:white; font-size:15px; font-weight:bold;   font-family: Marker Felt, fantasy;">${task.description}</p>
+        <p style = "color:white; font-size:15px; font-weight:bold;   font-family: Marker Felt, fantasy;">${task.date}</p>`;
         taskList.appendChild(taskItem);
+        
+        
+        //resource WWschool 
+         const closeButton = document.createElement('span');
+  closeButton.className = 'close';
+  closeButton.innerHTML = '\u00D7';
+  taskItem.appendChild(closeButton);
+  
+    // Add a click event listener to the close button
+  closeButton.addEventListener('click', function() {
+    taskItem.style.display = 'none';
+  });
     
         // Clear the form inputs
         taskTitleInput.value = '';
         taskDescriptionInput.value = '';
         taskDateInput.value = '';
       });
+      
+      // Resource: WWschool 
+      const taskItems = document.getElementsByTagName('LI');
+for (let i = 0; i < taskItems.length; i++) {
+  const closeButton = document.createElement('SPAN');
+ 
+  closeButton.innerHTML = '\u00D7';
+   closeButton.className = 'close';
+  taskItems[i].appendChild(closeButton);
+
+  closeButton.addEventListener('click', function() {
+    taskItems[i].style.display = 'none';
+  });
+}
+      
     </script>
   </body>
 </html>
+
