@@ -10,9 +10,14 @@ Think of it as an opportunity to hone your ability to pitch an idea that you hav
 
 ## Set Up Instructions
 You can find more information about our website under `planify/docs/get-started.md` but below are basic instructions to get the website up and running assuming you already have the prerequisites outlined in the `get-started.md` file.
-- Your project should take the form of a Node package, with all of the attendant items associated with that.
-The following three script commands should work in your package:
 
+To run the website:
+1. clone this repository 
+2. cd into the cloned repository 
+3. run the following command: `node server.js`
+4. navigate to http://localhost:3000/ in your browser
+
+Npm commands:
 1. `npm install` - Install dependencies for your package.
 2. `npm test` - Start app, check that everything can run, and then stop app.
 3. `npm run` - Command to bring up all parts of the app/system's server scripts.
