@@ -19,10 +19,12 @@ Dependencies:
 - body-parser
 
 To run the website:
-1. clone this repository 
+1. clone this repository
 2. cd into the cloned repository 
-3. run the following command: `node server.js`
-4. navigate to http://localhost:3000/ in your browser
+3. run `npm install`
+4. run the following command: `node server.js`
+5. navigate to http://localhost:3000/ in your browser
+Run `Ctrl+C` to terminate the application
 
 Npm commands:
 1. `npm install` - Install dependencies for your package.
