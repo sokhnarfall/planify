@@ -19,11 +19,13 @@ const session = require('express-session');
 const firebaseAuth = require('firebase-auth');
 
 // Initialize the Firebase Authentication client
-const auth = firebaseAuth(admin);
+//const auth = firebaseAuth(admin);
 
 
 // Initialize an empty list of users
 const users = [];
+
+const currentUser = "";
 
 // Homepage
 app.get("/", (req, res) => {
@@ -59,22 +61,32 @@ app.get("/login", (req, res) => {
 // Handle login form submission
 app.post("/login", (req, res) => {
   const { username, password } = req.body;
-  // Authenticate the user with Firebase Authentication
-  auth.signInWithEmailAndPassword(username, password).then((userCredential) => {
-    // Store the user ID in the session for future requests
-    req.session.userId = userCredential.user.uid;
-
-    // Send a success response to the client
-    res.redirect("/homepage");
-    res.status(200).send('Login successful');
-    
-  }).catch((error) => {
-      // Send an error response to the client
-      console.error('Error logging in:', error);
-      res.status(401).send('Invalid email or password');
-    });
-
+  // Check if the user exists
+  accountsRef.orderByChild("username").equalTo(username).once("value", (snapshot) => {
+    if (snapshot.exists()) {
+      // If the user exists, check if the password is correct
+      snapshot.forEach((account) => {
+        const accountData = account.val();
+        if (accountData.password === password) {
+          // If the password is correct, redirect the user to the dashboard
+          req.session.accountId = account.key;
+          res.redirect("/homepage");
+        } else {
+          // If the password is incorrect, show an error message
+          res.send(
+            "<h1>Incorrect password. Please try again.</h1>"
+          );
+        }
+      });
+    } else {
+      // If the user does not exist, show an error message
+      res.send(
+        "<h1>User does not exist. Please sign up.</h1>"
+      );
+    }
+  });
 });
+
 
 // Signup page
 app.get("/signup", (req, res) => {
@@ -115,12 +127,12 @@ app.post("/signup", (req, res) => {
     accountsRef.child(newAccountId).set(newAccountData)
     .then(() => {
       // Send a success response to the client
-      res.status(200).send('Account created successfully');
+      //res.status(200).send('Account created successfully');
     })
     .catch((error) => {
       // Send an error response to the client
       console.error('Error creating new account:', error);
-      res.status(500).send('Error creating new account');
+      //res.status(500).send('Error creating new account');
     });
 
     users.push({ username, password });
@@ -131,8 +143,13 @@ app.post("/signup", (req, res) => {
 // Homepage
 app.get("/homepage", (req, res) => {
   // Render the homepage with a welcome message for the authenticated user
-  res.send(`
-  <h1>Welcome to Planify, ${req.query.username}!</h1>
+  const accountId = req.session.accountId;
+  accountsRef.child(accountId).once("value", (snapshot) => {
+    const accountData = snapshot.val();
+    const username = accountData.username;
+    // Use the retrieved username as needed
+    res.send(`
+  <h1>Welcome to Planify, ${username}!</h1>
     <h2>Add a Task</h2>
 
 
@@ -170,6 +187,7 @@ app.get("/homepage", (req, res) => {
 //       taskTitleInput.value = '';
 //       taskDescriptionInput.value = '';
 //       taskDateInput.value = '';
+
 //   });
 // </script>
 
@@ -261,6 +279,8 @@ data.forEach((item) => {
 </html>
 
 `);
+  });
+  
 });
 
 // Start server
