@@ -22,11 +22,10 @@ To run the website:
 1. clone this repository
 2. cd into the cloned repository 
 3. run `npm install`
-4. run the following command: `node server.js`
+4. run `node server.js`
 5. navigate to http://localhost:3000/ in your browser
-Run `Ctrl+C` to terminate the application
 
-Npm commands:
-1. `npm install` - Install dependencies for your package.
-2. `npm test` - Start app, check that everything can run, and then stop app.
-3. `npm run` - Command to bring up all parts of the app/system's server scripts.
+Other commands:
+- Type `Ctrl+C` to terminate the application
+- `npm test` for debugging.
+- `npm run` to bring up all parts of the app/system's server scripts.
