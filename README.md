@@ -11,6 +11,13 @@ Think of it as an opportunity to hone your ability to pitch an idea that you hav
 ## Set Up Instructions
 You can find more information about our website under `planify/docs/get-started.md` but below are basic instructions to get the website up and running assuming you already have the prerequisites outlined in the `get-started.md` file.
 
+Dependencies:
+express
+express-session
+firebase
+firebase-auth
+body-parser
+
 To run the website:
 1. clone this repository 
 2. cd into the cloned repository 
