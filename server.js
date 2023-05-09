@@ -85,132 +85,170 @@ app.get("/homepage", (req, res) => {
     <h2>Add a Task</h2>
 
 
-// <form id="add-task-form">
-//   <label for="task-title">Task Title:</label>
-//   <input type="text" id="task-title" name="task-title">
-//   <label for="task-description">Task Description:</label>
-//   <input type="text" id="task-description" name="task-description">
-//   <label for="task-date">Task Date:</label>
-//   <input type="date" id="task-date" name="task-date">
-//   <span onclick="newElement()" class="addBtn">Add</span>
-// </form>
 
-// <ul id="task-list"></ul>
-
-// <script>
-
-//   const addTaskForm = document.querySelector('#add-task-form');
-//   const taskTitleInput = document.querySelector('#task-title');
-//   const taskDescriptionInput = document.querySelector('#task-description');
-//   const taskDateInput = document.querySelector('#task-date');
-//   const taskList = document.querySelector('#task-list');
+  <head>
+    <style>
+    body{
+    background-color: #DBF9FC; 
+ background-image: url("https://images.pexels.com/photos/606539/pexels-photo-606539.jpeg?auto=compress&cs=tinysrgb&w=800");
+ 			background-size: cover;
+			
+    
+    }
+      .submitBtn {
+        padding: 10px;
+        background: #EDBB99;
+        width: 100%;
+        color: white;
+        font-weight: bold;
+        float: left;
+        text-align: center;
+        font-size: 18px;
+        transition: 0.3s;
+        border-radius: 0;
+          font-family: Marker Felt, fantasy;
+      }
+      .taskfield {
+        padding: 5px;
+        width: 150%;
+        color: #555;
+        float: left;
+        text-align: left;
+        font-size: 16px;
+        --cursor: pointer;
+        border-radius: 0;
+        font-weight: bold
+        
+      }
+      .descriptionfield {
+        padding: 5px;
+        width: 150%;
+        color: #555;
+        float: left;
+        text-align: left;
+        font-size: 16px;
+        border-radius: 0;
+      }
+      .datefield {
+        padding: 5px;
+        width: 150%;
+        color: #555;
+        float: left;
+        text-align: left;
+        font-size: 16px;
+        border-radius: 0;
+      
+      }
+      h2{
+      color:white;
+      font-size: 40px;
+      font-weight: bold;
+      font-family: Marker Felt, fantasy;
+      }
+   	title{
+    color: white;
+    }
   
-
-//   addTaskForm.addEventListener('submit', function(event) {
-//     event.preventDefault();
-  
-//     const task = {
-//       title: taskTitleInput.value,
-//       description: taskDescriptionInput.value,
-//       date: taskDateInput.value
-//     };
-
-       // Clear the form inputs
-//       taskTitleInput.value = '';
-//       taskDescriptionInput.value = '';
-//       taskDateInput.value = '';
-//   });
-// </script>
-
-
-// new stuff
-
-<html>  
-<head>
-<style>
-.submitBtn {
-  padding: 10px;
-  background: #90ee90;
-  width: 100%;
-  color: #555;
-  float: left;
-  text-align: center;
+    ul.no-bullets{
+    list-style-type:none;
+    }
+    ul {
+    margin:0;
+    padding:0;
+    }
+    ul li 
+    {
+    cursor: pointer;
+ -- position: relative;
+  --padding: 6px 8px 6px 8px;
+  list-style-type: none;
+  --background: #eee;
+  background-size: .5px;
   font-size: 18px;
-  transition: 0.3s;
-  border-radius: 0;
+  --transition: 0.2s;
 }
-  .taskfield {
-    padding: 5px;
-    width: 150%;
-    color: #555;
-    float: left;
-    text-align: left;
-    font-size: 16px;
-    //cursor: pointer;
-    border-radius: 0;
-    }
-  .descriptionfield {
-    padding: 5px;
-    width: 150%;
-    color: #555;
-    float: left;
-    text-align: left;
-    font-size: 16px;
-    border-radius: 0;
-    }
-  .datefield {
-    padding: 5px;
-    width: 150%;
-    color: #555;
-    float: left;
-    text-align: left;
-    font-size: 16px;
-    border-radius: 0;
-    }
-</style>  
 
-<title> ToDo Page </title>  
-</head>  
-
-<body align="center">  
-<h2> Create a New Task </h2>  
-<table cellspacing="2" align="center" cellpadding="8" border="0">  
-
-<tr><td> Task </td>   
-<td><input type="text" placeholder="Enter a title for this task" class="taskfield" id="taskTitle"></td></tr>  
-
-<tr><td> Description </td>  
-<td><input type="text" placeholder="Elaborate more on this task..." class="descriptionfield" id="description"></td></tr>
-
-<tr><td> Date </td>  
-<td><input type="date" name="task-date" class="datefield" id="dateInput"></td></tr>
-
-<td><input type="submit" value="Add Task" name="Add Task" onclick="newTask()" class="submitBtn"</td>
-
-</table>
-</script>
-
-<h1>My To Do List</h1>
-<ul id="taskList"></ul>
-
-<script>
-function newTask() {
-let data = ["listitem1", "listitem2"];
-let list = document.getElementById("taskList");
+    </style>  
+    <title> ToDo Page </title>
+    
+  </head>  
+  <body align-item="center">  
+    <h2> Enter A Task </h2>  
+    <form id="add-task-form">
+      <div class="input-group">
+        <label for="task-title"style = "color:white; font-size:25px; font-weight:bold;   font-family: Marker Felt, fantasy;">Task Title:</label>
+        <input type="text" id="task-title" name="task-title" class="taskfield">
+      </div>
+      <div class="input-group">
+        <label for="task-description" style = "color:white;font-size:25px; font-weight:bold;   font-family: Marker Felt, fantasy;;">Task Description:</label>
+        <input type="text" id="task-description" name="task-description" class="descriptionfield">
+      </div>
+      <div class="input-group">
+        <label for="task-date"style = "color:white; font-size:25px; font-weight:bold;   font-family: Marker Felt, fantasy;">Task Date:</label>
+        <input type="date" id="task-date" name="task-date" class="datefield">
+      </div>
+      <button type="submit" class="submitBtn">Add Task</button>
+    </form>
+    
+    <ul id="task-list" class="no-bullets"></ul>
+    
+    <script>
+      const addTaskForm = document.querySelector('#add-task-form');
+      const taskTitleInput = document.querySelector('#task-title');
+      const taskDescriptionInput = document.querySelector('#task-description');
+      const taskDateInput = document.querySelector('#task-date');
+      const taskList = document.querySelector('#task-list');
+  
+      addTaskForm.addEventListener('submit', function(event) {
+        event.preventDefault();
+    
+        const task = {
+          title: taskTitleInput.value,
+          description: taskDescriptionInput.value,
+          date: taskDateInput.value
+        };
+    console.log("\n");
+        const taskItem = document.createElement('LI');
+        taskItem.innerHTML = `<h3 style = "color:white; font-size:15px; font-weight:bold;   font-family: Marker Felt, fantasy;">${task.title}</h3><p style = "color:white; font-size:15px; font-weight:bold;   font-family: Marker Felt, fantasy;">${task.description}</p>
+        <p style = "color:white; font-size:15px; font-weight:bold;   font-family: Marker Felt, fantasy;">${task.date}</p>`;
+        taskList.appendChild(taskItem);
+        
+        
+        //resource WWschool 
+         const closeButton = document.createElement('span');
+  closeButton.className = 'close';
+  closeButton.innerHTML = '\u00D7';
+  taskItem.appendChild(closeButton);
+  
+    // Add a click event listener to the close button
+  closeButton.addEventListener('click', function() {
+    taskItem.style.display = 'none';
+  });
+    
+        // Clear the form inputs
+        taskTitleInput.value = '';
+        taskDescriptionInput.value = '';
+        taskDateInput.value = '';
+      });
+      
+      // Resource: WWschool 
+      const taskItems = document.getElementsByTagName('LI');
+for (let i = 0; i < taskItems.length; i++) {
+  const closeButton = document.createElement('SPAN');
  
-data.forEach((item) => {
-  let li = document.createElement("li");
-  li.innerText = item;
-  list.appendChild(li);
-});
-}
+  closeButton.innerHTML = '\u00D7';
+   closeButton.className = 'close';
+  taskItems[i].appendChild(closeButton);
 
-</script>
-</body>
+  closeButton.addEventListener('click', function() {
+    taskItems[i].style.display = 'none';
+  });
+}
+      
+    </script>
+  </body>
 </html>
 
-`);
-});
 
 // Start server
 app.listen(3000, () => {
