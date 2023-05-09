@@ -1,6 +1,9 @@
 # Planify
 Get organized with planify! Planify is a website that allows you to organize tasks and prioritize them by urgency. Users can set specififc time frames for a list of taks and cross them off once they are completed.
 
+# Demo
+https://youtu.be/O6J7Dw2X7rI
+
 ## Set Up Instructions
 You can find more information about our website under `planify/docs/get-started.md` but below are basic instructions to get the website up and running assuming you already have the prerequisites outlined in the `get-started.md` file.
 
