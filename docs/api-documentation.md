@@ -3,24 +3,22 @@
 ## Server
 http://localhost:3000/
 
-1. Path: api.get('/')
+### 1. Path: app.get('/')
 - Directs the user to login or register
 
-2. Path api.get('/homepage')
+### 2. Path app.get('/homepage')
 - Renders the homepage and displays user's tasks
 
-"/login"
+### 3. Path app.get('/login')
 - Renders the login page
 
-"/signup"
+### 4. Path app.get('/signup')
 - Renders the registration page
 
-### POST
-
-"/login"
+### 5. Path app.post('/login')
 - Handles user login
 
-"/signup"
+### 6. Path app.post('/signup')
 - Handles user registration
 
 
