@@ -3,11 +3,10 @@
 ## Server
 http://localhost:3000/
 
-### GET
-"/"
-- Renders the homepage and directs user to login or register
+1. Path: api.get('/')
+- Directs the user to login or register
 
-"/homepage"
+2. Path api.get('/homepage')
 - Renders the homepage and displays user's tasks
 
 "/login"
