@@ -1,12 +1,3 @@
-const express = require("express");
-const bodyParser = require("body-parser");
-const app = express();
-app.use(bodyParser.urlencoded({ extended: false }));
-app.use(bodyParser.json());
-
-// Initialize an empty list of users
-const users = [];
-
 app.get("/", (req, res) => {
     // Render the homepage with two buttons and a subtitle
     res.send(`
